@@ -1,0 +1,40 @@
+{
+	"turmas": [
+		{
+			"curso": "TADS",
+			"disciplina": "LP3",
+			"alunos": [
+				"Adriano",
+				"Anderson",
+				"Dayane",
+				"Ederson",
+				"Gabriel",
+				"Jociana",
+				"Luiz F.",
+				"Ricardo",
+				"Robson",
+				"Victoria",
+				"Wagner"
+			]
+		},
+
+		{
+			"curso": "TADS",
+			"disciplina": "FR1",
+			"alunos": [
+				"Adriano",
+				"Anderson",
+				"Dayane",
+				"Ederson",
+				"Gabriel",
+				"Jociana",
+				"Luiz F.",
+				"Ricardo",
+				"Robson",
+				"Victoria",
+				"Wagner"
+			]
+		}
+
+	]
+}

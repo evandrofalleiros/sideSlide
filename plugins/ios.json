@@ -1,0 +1,19 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "config.xml": {
+            "/*": {
+                "<feature name=\"NativeTransitions\"><param name=\"ios-package\" value=\"NativeTransitions\" /><param name=\"onload\" value=\"true\" /></feature>": 1
+            }
+        }
+    },
+    "installed_plugins": {
+        "nativetransitions": {
+            "PACKAGE_NAME": "edu.br.ifms.chamada"
+        }
+    },
+    "dependent_plugins": {}
+}

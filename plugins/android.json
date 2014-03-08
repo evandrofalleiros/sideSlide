@@ -1,0 +1,13 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {},
+    "installed_plugins": {
+        "nativetransitions": {
+            "PACKAGE_NAME": "edu.br.ifms.chamada"
+        }
+    },
+    "dependent_plugins": {}
+}
