@@ -301,8 +301,6 @@ header.descricao-container h2{
     top:1.5rem;
 }
 
-
-
 /* Form - login*/
 
 form#form-acesso{
@@ -418,19 +416,16 @@ ul.lista-alunos > li{
     -webkit-animation:fade 3000ms infinite;
 }
 
+/* Responsive Typography*/
 
-@media (max-width: 640px) { 
-    
-} 
-
-@media (min-width: 640px) { 
-    
-} 
-
-@media (min-width:960px) { 
-   
+@media screen and (max-width: 40em) {
+    body {
+        font-size:90%;
+    }
 }
-
-@media (min-width:1100px) { 
-   
-} 
+ 
+@media screen and (max-width: 30em) {
+    body {
+        font-size:80%;
+    }
+}
