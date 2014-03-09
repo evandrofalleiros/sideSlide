@@ -355,10 +355,18 @@ label{
 
 .container{
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 2.6rem;
 }
 
 /* Lista de Alunos */
+
+.list-title{
+    color: #00A287;
+    font-family: latobold;
+    background: #252B2A;
+    position: fixed;
+    width: 100%;
+}
 
 ul.lista-alunos{
     margin: 0;
@@ -370,11 +378,18 @@ ul.lista-alunos{
 }
 
 ul.lista-alunos > li{
-    font-family: latoregular;
     font-size: 1.2em;
     padding: 0.5em 1em;
+}
+
+ul.lista-alunos > li:nth-child(2){
+    margin-top: 2.5rem;
+}
+
+ul.lista-alunos > li:not([class*="list-title"]){
     border-bottom: solid 1px rgba(255,255,255,0.1); 
 }
+
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -423,10 +438,18 @@ ul.lista-alunos > li{
     html {
         font-size:90%;
     }
+
+    .page-ball{
+        margin: 1.5rem 0.3rem;
+    }
 }
  
 @media screen and (max-width: 30em) {
     html {
         font-size:80%;
+    }
+
+    .page-ball{
+        margin: 1.5rem 0.2rem;
     }
 }

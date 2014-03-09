@@ -2,8 +2,7 @@
 
 $.fn.sideSlide = function(options){
     var $self = $(this);
-    var $pages = $self.children('.page');    
-    var $menu = $pages.find('h1');
+    var $pages = $self.children('.page');  
     var $current = $($pages[0]);
     var leftPad = 100;
     var currentIndex = 0;
@@ -56,8 +55,15 @@ $.fn.sideSlide = function(options){
         if (index > 0){
             $(page)
                 .css('left', leftPad + '%')
-                .find('header.descricao-container > h1, header.descricao-container > h2')
+                .find('[position="absolute"], [position="fixed"]')
                 .css('marginLeft', leftPad + '%');
+
+                // $(page)
+                // .css('left', leftPad + '%')
+                // .find('header.descricao-container > *')
+                // .css('marginLeft', leftPad + '%')
+                // .find('.list-title')
+                // .css('marginLeft', leftPad + '%');
 
             leftPad += 100;
             
@@ -78,31 +84,31 @@ $.fn.sideSlide = function(options){
             return false;
         }
 
-        var $last = $current.removeClass('current');
-        
-        $current = $($pages[index]);
-        $current.addClass('current');
         currentIndex = index;
+
+        var $last = $current.removeClass('current');
+        $current = $($pages[index]).addClass('current');
 
         $(function () {        
             $('#app').animate({
                 scrollLeft: index * $(window).width()
             }, 500 );
 
-            $('header.descricao-container > h1', $current).animate({
+            $('li.list-title', $last).animate({
                 marginLeft: - index * 100  + '%'
             }, 300 );
 
-            $('header.descricao-container > h1', $last).animate({
+            $('li.list-title', $current).animate({
+                marginLeft: - index * 100  + '%'
+            }, 300 );
+            
+
+            $('header.descricao-container *', $current).animate({
                 marginLeft: - index * 100  + '%'
             }, 300 );
 
-            $('header.descricao-container > h2', $current).animate({
+            $('header.descricao-container *', $last).animate({
                 marginLeft: - index * 100  + '%'
-            }, 300 );
-
-            $('header.descricao-container > h2', $last).animate({
-                marginLeft: - index * 100 + '%'
             }, 300 );
             
             $activeBall.stop().animate({

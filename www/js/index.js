@@ -85,7 +85,7 @@ var app = {
         var turmas = jsonFile['turmas'];
         
         $.each(turmas, function(index, turma){
-            var alunosArray = [];
+            var alunosArray = ['<li class="list-title" data-type="checkbox">Nome</li>'];
             var $turma = $('<article />', { class: 'page' });
             var $descricaoContainer = $('<header />', {'class': 'nav-bar descricao-container'});
             var $conteudoContainer = $('<div />', {'class': 'container'});
@@ -112,9 +112,7 @@ var app = {
                 .append($conteudoContainer)
                 .append($descricaoContainer);
             $container.append($turma); 
-        });
-
-        
+        });       
 
     },
 
